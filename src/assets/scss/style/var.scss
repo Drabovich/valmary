@@ -1,0 +1,108 @@
+@use "sass:math";
+
+// Prc
+@function prc($pxOne, $pxTwo) {
+    @return math.div($pxOne, $pxTwo) * 100%;
+};
+
+// line-height
+@function lh($pxLh, $pxFz) {
+    @return math.div($pxLh, $pxFz);
+};
+
+// EM
+@function em($pxOne, $pxTwo) {
+    @return math.div($pxOne, $pxTwo) + em;
+};
+
+// REM
+@function rem($px) {
+    @return math.div($px, 16) + rem;
+};
+
+// Ширина всего полотна макета
+$maxWidth: 1440;
+
+// Ширина ограничивающего контейнера по макету
+$maxWidthContainer: 1200;
+
+
+// Адаптивные свойства!!!
+// @include adaptiv-value ("font-size", start, min, type);
+
+@mixin adaptiv-value($property, $startSize, $minSize, $type) {
+    $addSize: $startSize - $minSize;
+    @if $type==1 {
+        // Только если меньше контейнера
+        #{$property}: $startSize + px;
+        @media (max-width: #{$maxWidthContainer + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+        }
+    } @else if $type==2 {
+        // Только если больше контейнера
+        #{$property}: $startSize + px;
+        @media (min-width: #{$maxWidthContainer + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+        }
+    } @else {
+        // Всегда 
+        #{$property}: $startSize + px;
+        @media (max-width: #{$maxWidth + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+        }
+    }
+}
+
+
+// @include adaptiv-personal ("font-size", $startSize, $minSize, $maxScreenResolution);
+@mixin adaptiv-personal($property, $startSize, $minSize, $maxScreenResolution) {
+    $addSize: $startSize - $minSize;
+    #{$property}: $startSize + px;
+    @media (max-width: #{$maxScreenResolution + px}) {
+        #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxScreenResolution - 320}));
+    }
+}
+
+
+// Переменные цветов
+
+$black: #000;
+$white: #fff;
+$green: #55A630;
+$lightGreen: #B7ECB1;
+$blue: #4340B4;
+$turquoise: #00A896;
+$dark: #424242;
+
+.hidden {
+    display: none !important;
+}
+
+.flex-active {
+    display: flex !important;
+}
+
+.lock {
+    overflow: hidden !important;
+    touch-action: none !important;
+}
+
+.fixed {
+    position: fixed !important;
+}
+
+
+// Общие кнопки
+.btn-green{
+    max-width: 361px;
+    width: 100%;
+    height: 65px;
+    background-color: $green;
+    color: $white;
+    font-family: 'Montserrat-Bold';
+    @include adaptiv-value ("font-size", 22, 15, 1);
+    border-radius: 5px;
+}
+
+
+
