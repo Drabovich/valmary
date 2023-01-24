@@ -74,6 +74,10 @@ $blue: #4340B4;
 $turquoise: #00A896;
 $dark: #424242;
 
+body{
+    background-color: $white;
+}
+
 .hidden {
     display: none !important;
 }

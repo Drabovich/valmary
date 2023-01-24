@@ -2,34 +2,6 @@ const body = document.querySelector('body');
 
 window.addEventListener('DOMContentLoaded', () => {
   
-  // Табы
-  const tabs = () => {
-  
-      function bindTabs(tabSelector, contentSelector, activeClass, startTitle, startContent) {
-  
-          const tabTitle = document.querySelectorAll(tabSelector),
-              tabContent = document.querySelectorAll(contentSelector);
-  
-              tabTitle.forEach(item => item.addEventListener('click', () => {
-  
-                  tabContent.forEach(element => element.classList.add('hidden'));
-  
-                  tabTitle.forEach(element => element.classList.remove(activeClass));
-  
-              item.classList.add(activeClass);
-  
-              const activeContent = document.querySelector('#' + item.dataset.tab);
-              activeContent.classList.remove('hidden');
-          }))
-  
-          document.querySelector(startTitle).classList.add(activeClass);
-          document.querySelector(startContent).classList.remove('hidden');
-      }
-  
-      // Табы в выпадающем меню в шапке сайта
-      // bindTabs('.catalog-header__title', '.catalog-header__content', 'active-title', '[data-tab="tab-1"]', '#tab-1');
-  }
-  
   // Модальные окна
   const modals = () => {
   
@@ -92,9 +64,70 @@ document.querySelector('.burger__close').addEventListener('click', () => {
 
 document.querySelector('.header__bottom').addEventListener('click', function(event) {
 	if (this.classList.contains('flex-active') && event.target === this) {
-		console.log('dsadsadasda');
 		this.classList.remove('flex-active');
 		body.classList.remove('lock')
 		body.style.paddingRight = '';
 	}
 })
+
+
+// Слайдер с карточками курсов
+const swiper = new Swiper('.courses__slider', {
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 60,
+
+    breakpoints: {
+        1240: {
+            spaceBetween: 60,
+            centeredSlides: false,
+            slidesPerView: 3,
+        },
+        1001: {
+            spaceBetween: 30,
+            centeredSlides: false,
+            slidesPerView: 3,
+        },
+        701: {
+            slidesPerView: 3,
+            centeredSlides: false,
+            spaceBetween: 19,
+        },
+        431: {
+            slidesPerView: 2,
+            centeredSlides: true,
+            spaceBetween: 19,
+        },
+        0: {
+            spaceBetween: 19,
+            slidesPerView: 1.5,
+            centeredSlides: true,
+        },
+    },
+
+
+    // autoHeight: true, // выравнивание по высоте
+    // simulateTouch: false, // откл свайпы на ПК
+    // watchOverflow: false, // откл слайдер если нет слайдов
+    // slidesPerGroup: 2, // кол-во пролистываемых слайдов
+    // initialSlide: 0, // Начинаем со 2 слайдера
+    // slidesPerColumn: 2, // делаем 2 рядад, высота должна быть фикс.
+    // freeMode: true, // можно перетаскивать как ленту
+    // lazyLoading: true,
+	// watchSlidesProgress: true
+
+
+
+    pagination: {
+        el: '.courses__pagination',
+        clickable: true,
+    },
+
+    navigation: {
+        nextEl: '.courses__btn-next',
+        prevEl: '.courses__btn-prev',
+    },
+
+    
+});
