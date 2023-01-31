@@ -2007,3 +2007,538 @@
         }
     }
 }
+
+.stocks{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 1240px) {
+        padding: 0 20px;      
+    }
+
+    @media (max-width: 1000px) {
+        padding: 0 60px;      
+    }
+
+    @media (max-width: 768px) {
+        padding: 0;          
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 75px;
+        max-width: 1200px;
+        width: 100%;
+
+        @media (max-width: 1240px) {
+            row-gap: 50px;          
+        }
+
+        @media (max-width: 768px) {
+            row-gap: 40px;          
+        }
+
+        h2{
+            text-align: center;
+            font-family: 'Montserrat-SemiBold';
+            font-size: 35px;
+            color: $dark;
+
+            @media (max-width: 1240px) {
+                font-size: 30px;       
+            }
+
+            @media (max-width: 1000px) {
+                font-size: 25px;       
+            }
+
+            @media (max-width: 768px) {
+                font-size: 20px;           
+            }
+        }
+
+        .stocks__wrapper{
+            position: relative;
+            width: 1200px;
+
+            @media (max-width: 1240px) {
+                width: 959px;      
+            }
+
+            @media (max-width: 1000px) {
+                width: 640px;      
+            }
+
+            @media (max-width: 768px) {
+                width: 420px;      
+            }
+
+            @media (max-width: 480px) {
+                width: 310px;      
+            }
+
+            .stocks__btn-next, .stocks__btn-prev{
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 30px;
+                height: 38px;
+                cursor: pointer;
+
+                @media (max-width: 1000px) {
+                    width: 15px;
+                    height: 22px;       
+                }
+
+                @media (max-width: 768px) {
+                    display: none;          
+                }
+
+                svg{
+                    width: 16px;
+                    height: 24px;
+
+                    @media (max-width: 1000px) {
+                        width: 11px;
+                        height: 16px;       
+                    }
+                }
+            }
+
+            .stocks__btn-prev{
+                left: -30px;
+
+                @media (max-width: 1000px) {
+                    left: -20px;     
+                }
+            }
+            
+            .stocks__btn-next{
+                right: -30px;
+
+                @media (max-width: 1000px) {
+                    right: -20px;     
+                }
+            }
+
+            .stocks__slider{
+                width: 1200px;
+                overflow: hidden;
+
+                @media (max-width: 1240px) {
+                    width: 959px;      
+                }
+
+                @media (max-width: 1000px) {
+                    width: 640px;      
+                }
+
+                @media (max-width: 768px) {
+                    width: 420px;      
+                }
+
+                @media (max-width: 480px) {
+                    width: 310px;
+                }
+
+                .swiper-wrapper{
+                    .stocks-slide, .stocks-slide img{
+                        width: 380px;
+                        height: 380px;
+                        margin: 0;
+
+                        @media (max-width: 1240px) {
+                            width: 303px;
+                            height: 303px;       
+                        }
+
+                        @media (max-width: 1000px) {
+                            width: 200px;
+                            height: 200px;       
+                        }
+                    }
+                }
+            }
+        }
+
+        .stocks-pagination{
+            text-align: center;
+
+            .swiper-pagination-bullet{
+                width: 15px;
+                height: 15px;
+                background-color: #B7ECB1;
+                opacity: 1;
+
+                @media (max-width: 1000px) {
+                    width: 10px;
+                    height: 10px;     
+                }
+            }
+
+            .swiper-pagination-bullet-active{
+                background-color: $green;
+            }
+        }
+    }
+}
+
+.contact{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 175px 0;
+
+    @media (max-width: 1240px) {
+        padding: 140px 20px;    
+    }
+
+    @media (max-width: 1000px) {
+        padding: 100px 60px;    
+    }
+
+    @media (max-width: 768px) {
+        padding: 80px 60px;    
+    }
+
+    @media (max-width: 480px) {
+        padding: 80px 10px;    
+    }
+
+    &__container{
+        display: flex;
+        justify-content: center;
+        max-width: 1200px;
+        width: 100%;
+        padding: 75px 0;
+        box-shadow:0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+        @media (max-width: 1240px) {
+            padding: 65px 0;  
+            max-width: 958px;
+        }
+
+        @media (max-width: 1000px) {
+            padding: 30px 0;  
+            max-width: 642px;
+        }
+
+        @media (max-width: 768px) {
+            max-width: 360px;  
+        }
+
+        @media (max-width: 480px) {
+            padding: 20px 0; 
+            max-width: 300px;  
+        }
+
+        .contact-form{
+            max-width: 503px;
+            width: 100%;
+
+            @media (max-width: 1240px) {
+                max-width: 450px;
+            }
+
+            @media (max-width: 1000px) {
+                max-width: 380px; 
+            }
+
+            @media (max-width: 700px) {
+                max-width: 360px;  
+            }
+
+            @media (max-width: 480px) {
+                max-width: 287px;       
+            }
+
+            h3{
+                font-family: 'Montserrat-SemiBold';
+                font-size: 30px;
+                color: $green;
+                text-align: center;
+                margin: 0 0 20px 0;
+
+                @media (max-width: 1000px) {
+                    margin: 0 0 15px 0;
+                    font-size: 25px;
+                }
+
+                @media (max-width: 700px) {
+                    font-size: 20px; 
+                }
+            }
+
+            p{
+                font-family: 'Montserrat-Medium';
+                font-size: 20px;
+                line-height: lh(26, 16);
+                color: $dark;
+                text-align: center;
+                margin: 0 0 60px 0;
+                padding: 0 10px;
+
+                @media (max-width: 1240px) {
+                    margin: 0 0 40px 0;
+                }
+
+                @media (max-width: 1000px) {
+                    font-size: 15px;
+                }
+
+                @media (max-width: 480px) {
+                    margin: 0 0 36px 0;
+                }
+            }
+
+            &__input{
+                margin: 0 0 15px 0;
+                text-align: center;
+
+                @media (max-width: 1000px) {
+                    margin: 0 0 11px 0;
+                }
+
+                input{
+                    max-width: 427px;
+                    width: 100%;
+                    height: 60px;
+                    border: 1px solid $green;
+                    color: #9C9C9C;
+                    font-family: 'Montserrat-Regular';
+                    font-size: 14px;
+                    padding: 0 0 0 34px;
+
+                    @media (max-width: 1000px) {
+                        max-width: 312px;
+                        height: 44px;
+                        padding: 0 0 0 24px;
+                    }
+
+                    @media (max-width: 480px) {
+                        max-width: 286px;
+                    }
+
+                    &:focus{
+                        outline: none;
+                    }
+                }
+            }
+
+            &__btn{
+                margin: 30px 0 0 0;
+                text-align: center;
+
+                @media (max-width: 1000px) {
+                    margin: 23px 0 0 0;
+                }
+                
+                button{
+                    max-width: 427px;
+                    width: 100%;
+                    height: 70px;
+                    background-color: $green;
+                    color: $white;
+                    font-family: 'Montserrat-SemiBold';
+                    font-size: 23px;
+
+                    @media (max-width: 1000px) {
+                        max-width: 312px;
+                        height: 52px;
+                        font-size: 15px;
+                    }
+
+                    @media (max-width: 480px) {
+                        max-width: 286px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer{
+    width: 100%;
+    min-height: 680px;
+    display: flex;
+    background-color: $dark;
+
+    @media (max-width: 1020px) {
+        min-height: 720px;
+    }
+
+    @media (max-width: 750px) {
+        min-height: 520px;
+    }
+
+    @media (max-width: 400px) {
+        min-height: 370px;
+    }
+
+    .footer__img{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 50px 50px 0 50px;
+
+        @media (max-width: 1020px) {
+            display: none;
+        }
+
+        img{
+            max-width: 500px;
+            width: 100%;
+        }
+    }
+
+    .contact-info{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding: 0 0 0 70px;
+        color: $white;
+        font-family: 'Montserrat-Medium';
+
+        @media (max-width: 1020px) {
+            width: 100%;
+            align-items: center;
+            padding: 0 100px;
+        }
+
+        @media (max-width: 550px) {
+            padding: 0 40px;
+        }
+
+        &__logo{
+            margin: 37px 0 50px;
+
+            @media (max-width: 750px) {
+                margin: 26px 0 36px;
+            }
+
+            @media (max-width: 400px) {
+                margin: 26px 0 20px;
+            }
+
+            a svg{
+                @media (max-width: 750px) {
+                    width: 55px;
+                    height: 55px;
+                }
+            }
+        }
+
+        &__tel{
+            a{
+                font-family: 'Montserrat-Bold';
+                font-size: 30px;
+
+                @media (max-width: 750px) {
+                    font-size: 20px;
+                }
+
+                @media (max-width: 400px) {
+                    font-size: 16px;
+                }
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        &__adress{
+            margin: 25px 0 75px;
+            font-size: 25px;
+
+            @media (max-width: 750px) {
+                margin: 15px 0 50px;
+                font-size: 20px;
+            }
+
+            @media (max-width: 400px) {
+                font-size: 16px;
+                margin: 10px 0 30px;
+            }
+        }
+
+        &__menu{
+            display: flex;
+            justify-content: space-between;
+            max-width: 335px;
+            width: 100%;
+            margin: 0 0 65px 0;
+            font-size: 18px;
+
+            @media (max-width: 750px) {
+                margin: 0 0 50px 0;
+                font-size: 15px;
+                max-width: 300px;
+            }
+
+            @media (max-width: 400px) {
+                max-width: 220px;
+                font-size: 12px;
+                margin: 0 0 40px 0;
+            }
+
+            ul{
+                display: flex;
+                flex-direction: column;
+                row-gap: 25px;
+
+                @media (max-width: 750px) {
+                    row-gap: 20px;
+                }
+    
+                @media (max-width: 400px) {
+                    row-gap: 10px;
+                }
+
+                li a {
+                    @media (any-hover: hover) {
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__social{
+            display: flex;
+            column-gap: 40px;
+
+            @media (max-width: 750px) {
+                column-gap: 30px;
+            }
+
+            @media (max-width: 400px) {
+                column-gap: 20px;
+            }
+
+            a svg{
+                @media (max-width: 750px) {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                @media (max-width: 400px) {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+}

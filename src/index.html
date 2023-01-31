@@ -365,7 +365,7 @@ title: Валмари
             <div class="benefits-card">
                 <h3>Сертификаты</h3>
                 <p>
-                    Удостоверение, сертификат и свидетельство полученные
+                    Удостоверение, сертификат и свидетельство полученные
                     у нас по окончанию курсов, работают как лучшая
                     "рекомендация" при приеме на работу
                 </p>
@@ -383,3 +383,49 @@ title: Валмари
         </div>
     </div>
 </section>
+<section class="stocks">
+    <div class="stocks__container">
+        <h2>Специальные предложения</h2>
+        <div class="stocks__wrapper">
+            <div class="stocks__slider">
+                <div class="swiper-wrapper">
+                    <div class="stocks-slide swiper-slide"><img src="./assets/img/slider1.png" alt="Stocks"></div>
+                    <div class="stocks-slide swiper-slide"><img src="./assets/img/slider2.png" alt="Stocks"></div>
+                    <div class="stocks-slide swiper-slide"><img src="./assets/img/slider3.png" alt="Stocks"></div>
+                    <div class="stocks-slide swiper-slide"><img src="./assets/img/slider1.png" alt="Stocks"></div>
+                    <div class="stocks-slide swiper-slide"><img src="./assets/img/slider2.png" alt="Stocks"></div>
+                    <div class="stocks-slide swiper-slide"><img src="./assets/img/slider3.png" alt="Stocks"></div>
+                </div>
+            </div>
+            <div class="stocks__btn-prev">
+                <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.99196 11.0064C1.3481 11.5738 1.31676 12.5231 1.92197 13.1267L11.7845 22.9634C12.3897 23.567 13.4023 23.5964 14.0462 23.029C14.69 22.4615 14.7214 21.5123 14.1161 20.9087L5.34946 12.165L14.676 3.94623C15.3199 3.37884 15.3512 2.42955 14.746 1.82592C14.1408 1.22231 13.1282 1.19293 12.4844 1.76031L1.99196 11.0064ZM3.03831 13.5987L6.23831 13.6915L3.65529 13.1267L3.13729 10.6001L3.03831 13.5987Z" fill="#424242"/>
+                </svg>
+            </div>
+            <div class="stocks__btn-next">
+                <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.008 11.0064C14.6519 11.5738 14.6832 12.5231 14.078 13.1267L4.2155 22.9634C3.61028 23.567 2.59771 23.5964 1.95383 23.029C1.30998 22.4615 1.27863 21.5123 1.88385 20.9087L10.6505 12.165L1.32396 3.94623C0.68009 3.37884 0.648761 2.42955 1.25398 1.82592C1.85919 1.22231 2.87177 1.19293 3.51563 1.76031L14.008 11.0064ZM12.9617 13.5987L9.76169 13.6915L12.3447 13.1267L12.8627 10.6001L12.9617 13.5987Z" fill="#424242"/>
+                </svg>
+            </div>
+        </div>
+        <div class="stocks-pagination"></div>
+    </div>
+</section>
+<section class="contact">
+    <div class="contact__container">
+        <form class="contact-form" method="post">
+            <h3>Закажите обратный звонок</h3>
+            <p>Оставьте заявку в форме и наш менеджер свяжется с вами</p>
+            <div class="contact-form__input">
+                <input name="contact-form__name" type="text" placeholder="Ваше имя" autocomplete="off" required>
+            </div>
+            <div class="contact-form__input">
+                <input name="contact-form__tel" type="tel" placeholder="Ваш номер телефона" autocomplete="off" required>
+            </div>
+            <div class="contact-form__btn">
+                <button type="submit">Отправить</button>
+            </div>
+        </form>
+    </div>
+</section>
+{{>footer}}
